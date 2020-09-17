@@ -1,7 +1,7 @@
 {
-	"name": "glatch-wp-starter-theme",
+	"name": "harvest",
 	"version": "1.0.0",
-	"description": "",
+	"description": "WordPress development starter theme using Timber.",
 	"scripts": {
 		"start": "gulp",
 		"build": "gulp build --prod",
@@ -9,7 +9,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/suginoki45/glatch-wp-starter-theme.git"
+		"url": "git+https://github.com/suginoki45/harvest.git"
 	},
 	"author": "Glatch",
 	"license": "MIT",
