@@ -1,0 +1,13 @@
+{% block footer %}
+	<footer class="section is-footer">
+		<div class="container">
+			{% if sidebar %}
+				<section class="section">
+					{{ sidebar }}
+				</section>
+			{% endif %}
+			<p class="c-copyright"><small>© {{ now|date('Y') }} {{ site.name }}</small></p>
+		</div>
+	</footer>
+	{{ function('wp_footer') }}
+{% endblock %}

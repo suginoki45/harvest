@@ -1,0 +1,20 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	<div class="section">
+		<div class="container">
+			<article class="article post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+				<h1 class="article-heading">{{ post.title }}</h1>
+				<img src="{{ post.thumbnail.src|resize(1200, 300) }}"
+					srcset="{{ post.thumbnail.src|retina(1)|resize(1200, 300) }} 1x,
+					{{ post.thumbnail.src|retina(2)|resize(2400, 600) }} 2x,
+					{{ post.thumbnail.src|retina(3)|resize(3600, 900) }} 3x
+					class="article-thumbnail">
+				<div class="article-body">
+					{{ post.content }}
+				</div>
+			</article>
+			{% include 'partial/breadcrumbs.twig'  with { 'breadcrumbs_items': breadcrumbs_items } %}
+		</div>
+	</div>
+{% endblock %}

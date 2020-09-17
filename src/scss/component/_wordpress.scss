@@ -1,0 +1,38 @@
+// WordPress default generate class styles.
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	clear: both;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.alignfull {
+}
+
+.alignwide {
+}
+
+.bypostauthor {
+}
+
+.gallery-item {
+}
+
+.gallery-caption {
+}
+
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}

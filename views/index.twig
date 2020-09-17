@@ -1,0 +1,24 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	<div class="section">
+		<div class="container">
+			{% include 'partial/hero.twig' %}
+			<section>
+				<ul class="grid is-gap-2 entries">
+					{% for post in posts %}
+						<li class="grid-column is-basis-4 entries-item">
+							<a href="{{ post.link }}">
+								{% if post.thumbnail %}
+									<img src="{{ post.thumbnail.src }}" class="entries-thumbnail" alt="Image for {{ post.title }}" />
+								{% endif %}
+								<p><time>{{ post.date }}</time></p>
+								<p>{{ post.title }}</p>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</section>
+		</div>
+	</div>
+{% endblock %}

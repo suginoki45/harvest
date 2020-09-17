@@ -1,0 +1,41 @@
+$flex-basis-split: 12 !default;
+
+$space-half: 4px !default;
+$space-1: 8px !default;
+$space-2: 16px !default;
+$space-3: 24px !default;
+$space-4: 32px !default;
+$space-5: 40px !default;
+$space-6: 48px !default;
+$space-7: 56px !default;
+
+$gap-sizes: (
+	"1": $space-1,
+	"2": $space-2,
+	"3": $space-3,
+	"4": $space-4,
+	"5": $space-5,
+	"6": $space-6,
+	"7": $space-7,
+);
+
+@for $i from 0 through $flex-basis-split {
+	.is-basis-#{$i} {
+		flex: 0 0 100% / $flex-basis-split * $i;
+	}
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	@each $size-name, $gap-size in $gap-sizes {
+		&.is-gap-#{$size-name} {
+			margin-bottom: -$gap-size;
+			margin-left: -$gap-size;
+			.grid-column {
+				padding-bottom: $gap-size;
+				padding-left: $gap-size;
+			}
+		}
+	}
+}

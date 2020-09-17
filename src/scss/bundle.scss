@@ -1,0 +1,10 @@
+@import "~minireset.css/minireset.min.css";
+@import "~sass-mq/mq";
+@import "config/*.scss";
+@import "base/*.scss";
+@import "component/**/*.scss";
+@import "layout/**/*.scss";
+
+.logo {
+	width: 240px;
+}

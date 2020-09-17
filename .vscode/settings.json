@@ -1,0 +1,33 @@
+{
+	// リポジトリ内に変更が多い場合は警告を無視
+	"git.ignoreLimitWarning": true,
+
+	// phpcsの保存時整形を動作させる為に、[php]のeditor.formatOnSaveをfalseに
+  "[html]": {
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[php]": {
+    "editor.formatOnSave": false
+	},
+
+	// WordPress Coding Standard準拠の設定
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"files.eol": "\n",
+	"phpcs.standard": "WordPress",
+
+	// phpcbfの設定
+  "phpcbf.standard": "WordPress",
+  "phpcbf.executablePath": "./vendor/bin/phpcbf",
+	"phpcbf.onsave": true,
+	"javascript.format.enable": false,
+	"typescript.format.enable": false,
+	"vetur.format.enable": false,
+	"eslint.format.enable": true,
+}

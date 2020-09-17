@@ -1,0 +1,9 @@
+.article-heading {
+	font-weight: 700;
+}
+
+.article-body {
+	> * + * {
+		margin-top: 32px;
+	}
+}

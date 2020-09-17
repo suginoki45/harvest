@@ -1,0 +1,43 @@
+.menu {
+	@include mq($until: map-get($mq-breakpoints, tablet)) {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 10rem 2rem 2rem;
+		text-align: center;
+		background-color: #212121;
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.2s ease-out;
+		will-change: opacity;
+	}
+	@include mq($until: map-get($mq-breakpoints, tablet)) {
+		&.is-active {
+			transform: translateX(0);
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	li {
+		@include mq($until: map-get($mq-breakpoints, tablet)) {
+			transform: translateY(2rem);
+			opacity: 0;
+		}
+	}
+	&.is-active li {
+		@include mq($until: map-get($mq-breakpoints, tablet)) {
+			transform: translateY(0);
+			opacity: 1;
+			transition: all 0.2s ease-out;
+		}
+	}
+	a {
+		@include mq($until: map-get($mq-breakpoints, tablet)) {
+			color: #fff;
+			font-weight: 700;
+			font-size: 2rem;
+		}
+	}
+}

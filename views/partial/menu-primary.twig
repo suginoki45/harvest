@@ -1,0 +1,18 @@
+<div class="toggle">
+	<button type="button" class="hamburger" id="js-hamburger">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+</div>
+<nav class="menu is-primary" id="js-menu">
+	{% if menu %}
+		<ul class="menu-inner">
+		{% for item in menu.items %}
+			<li class="{{ item.classes | join(' ') }}">
+				<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+			</li>
+		{% endfor %}
+		</ul>
+	{% endif %}
+</nav>

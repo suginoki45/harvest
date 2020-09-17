@@ -1,0 +1,12 @@
+{% block header %}
+	<header class="section is-header">
+		<div class="container">
+			{% if identifier == 'home' %}
+				{% include 'partial/branding-home.twig' %}
+			{% else %}
+				{% include 'partial/branding.twig' %}
+			{% endif %}
+			{% include 'partial/menu-primary.twig' %}
+		</div>
+	</header>
+{% endblock %}
