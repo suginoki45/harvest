@@ -1,6 +1,6 @@
-# Glatch WP starter theme
+# Harvest
 
-Starter kit for developing WordPress Theme.
+WordPress development starter theme using Timber.
 
 ## How to use
 ### STEP1
@@ -22,10 +22,6 @@ npm start
 Thanks!
 
 [Gulp for WordPress: Initial Setup](https://css-tricks.com/gulp-for-wordpress-initial-setup/)
-
-## About
-
-Web 制作ユニット[Glatch](https://glatchdesign.com/)が WordPress テーマ制作に使用しているスターターキットです。
 
 ## Dependencies
 ### npm packages
