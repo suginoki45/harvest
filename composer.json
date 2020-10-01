@@ -1,6 +1,5 @@
 {
 	"require": {
-		"inc2734/wp-breadcrumbs": "^1.0",
 		"timber/timber": "^1.18"
 	},
 	"require-dev": {
