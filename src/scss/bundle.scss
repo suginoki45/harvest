@@ -1,10 +1,12 @@
-@import "~minireset.css/minireset.min.css";
-@import "~sass-mq/mq";
-@import "config/*.scss";
-@import "base/*.scss";
-@import "component/**/*.scss";
-@import "layout/**/*.scss";
-
-.logo {
-	width: 240px;
-}
+@use "../../node_modules/minireset.css/minireset.min.css";
+@use "config/functions";
+@use "base/default-styles";
+@use "component/article";
+@use "component/hamburger";
+@use "component/header";
+@use "component/logo";
+@use "component/hero";
+@use "component/menu";
+@use "component/wordpress";
+@use "layout/grid";
+@use "layout/section";

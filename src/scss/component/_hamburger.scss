@@ -1,6 +1,9 @@
+@use "../../../node_modules/sass-mq/mq";
+@use "../config/variables";
+
 .toggle {
 	display: none;
-	@include mq($until: map-get($mq-breakpoints, tablet)) {
+	@include mq.mq($until: map-get(variables.$mq-breakpoints, tablet)) {
 		z-index: 9999;
 		display: block;
 	}

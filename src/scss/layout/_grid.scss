@@ -1,3 +1,6 @@
+@use "../../../node_modules/sass-mq/mq";
+@use "../config/variables";
+
 $flex-basis-split: 12 !default;
 
 $space-half: 4px !default;

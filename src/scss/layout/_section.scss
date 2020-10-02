@@ -1,13 +1,16 @@
+@use "../../../node_modules/sass-mq/mq";
+@use "../config/variables";
+
 // Setting section gutters.
-@each $device, $gutter-width in $section-gutters {
+@each $device, $gutter-width in variables.$section-gutters {
 	.section {
 		.container {
 			@if $device == mobile {
 				padding-right: $gutter-width;
 				padding-left: $gutter-width;
 			} @else {
-				@include mq($from: map-get($mq-breakpoints, $device)) {
-					max-width: map-get($section-widths, $device) + $gutter-width * 2;
+				@include mq.mq($from: map-get(variables.$mq-breakpoints, $device)) {
+					max-width: map-get(variables.$section-widths, $device) + $gutter-width * 2;
 					margin: 0 auto;
 					padding-right: $gutter-width;
 					padding-left: $gutter-width;

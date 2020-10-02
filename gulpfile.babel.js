@@ -25,7 +25,8 @@ import postcss from "gulp-postcss";
 import sourcemaps from "gulp-sourcemaps";
 import autoprefixer from "autoprefixer";
 import cleanCss from "gulp-clean-css";
-import magicImporter from "node-sass-magic-importer";
+
+sass.compiler = require("sass");
 
 // js
 import webpack from "webpack-stream";
@@ -82,10 +83,6 @@ const paths = {
 		],
 		dest: "packaged",
 	},
-};
-
-const sassOptions = {
-	importer: magicImporter(),
 };
 
 // Clean directory
@@ -175,7 +172,7 @@ export const styles = () => {
 			plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
 		)
 		.pipe(gulpif(!PRODUCTION, sourcemaps.init()))
-		.pipe(sass(sassOptions).on("error", sass.logError))
+		.pipe(sass().on("error", sass.logError))
 		.pipe(gulpif(PRODUCTION, postcss([autoprefixer({ grid: true })])))
 		.pipe(gulpif(PRODUCTION, cleanCss()))
 		.pipe(gulpif(!PRODUCTION, sourcemaps.write()))
