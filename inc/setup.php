@@ -2,21 +2,21 @@
 /**
  * Function to set up after set up theme
  *
- * @package _yourthemename
+ * @package harvest
  * @author  Glatch
  */
 
 namespace Harvest;
 
-if ( ! function_exists( '_yourthemename_setup' ) ) {
+if ( ! function_exists( 'setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 */
-	function _yourthemename_setup() {
+	function setup() {
 		/**
 		 * Loading language file.
 		 */
-		load_theme_textdomain( '_yourthemename', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'harvest', get_template_directory() . '/languages' );
 
 		/**
 		 * Support automatic-feed-links.
@@ -38,7 +38,7 @@ if ( ! function_exists( '_yourthemename_setup' ) ) {
 		 * Support custom-background.
 		 */
 		$custom_background_defaults = array();
-		add_theme_support( 'custom-background', apply_filters( '_yourthemename_custom_background_defaults', $custom_background_defaults ) );
+		add_theme_support( 'custom-background', apply_filters( 'harvest_custom_background_defaults', $custom_background_defaults ) );
 
 		/**
 		 * Support title-tag.
@@ -79,4 +79,4 @@ if ( ! function_exists( '_yourthemename_setup' ) ) {
 		);
 	}
 }
-add_action( 'after_setup_theme', '_yourthemename_setup' );
+add_action( 'after_setup_theme', 'Harvest\\setup' );

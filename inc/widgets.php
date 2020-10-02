@@ -2,22 +2,22 @@
 /**
  * Register widget area
  *
- * @package _yourthemename
+ * @package harvest
  * @author  Glatch
  */
 
 namespace Harvest;
 
-if ( ! function_exists( '_yourthemename_widgets_init' ) ) {
+if ( ! function_exists( 'widgets_init' ) ) {
 	/**
 	 * Register widget area.
 	 *
-	 * @package _yourthemename
+	 * @package harvest
 	 * @author  Glatch
 	 */
-	function _yourthemename_widgets_init() {
+	function widgets_init() {
 		$config = array(
-			'description'   => esc_html__( 'Add widgets here.', '_yourthemename' ),
+			'description'   => esc_html__( 'Add widgets here.', 'harvest' ),
 			'before_widget' => '<section class="widget %1$s %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -25,16 +25,16 @@ if ( ! function_exists( '_yourthemename_widgets_init' ) ) {
 		);
 		register_sidebar(
 			array(
-				'name' => esc_html__( 'Sidebar', '_yourthemename' ),
+				'name' => esc_html__( 'Sidebar', 'harvest' ),
 				'id'   => 'wp-widgets-sidebar',
 			) + $config
 		);
 		register_sidebar(
 			array(
-				'name' => esc_html__( 'Footer', '_yourthemename' ),
+				'name' => esc_html__( 'Footer', 'harvest' ),
 				'id'   => 'wp-widgets-footer',
 			) + $config
 		);
 	}
 }
-add_action( 'widgets_init', '_yourthemename_widgets_init' );
+add_action( 'widgets_init', 'Harvest\\widgets_init' );

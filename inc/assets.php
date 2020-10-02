@@ -2,17 +2,17 @@
 /**
  * Function to enqueue styles and scripts
  *
- * @package _yourthemename
+ * @package harvest
  * @author  Glatch
  */
 
 namespace Harvest;
 
-if ( ! function_exists( '_yourthemename_assets' ) ) {
+if ( ! function_exists( 'assets' ) ) {
 	/**
 	 *  Enqueue styles and scripts.
 	 */
-	function _yourthemename_assets() {
+	function assets() {
 		if ( ! is_admin() ) {
 			wp_enqueue_style( '_yourthemename-style', get_theme_file_uri( '/dist/css/bundle.css' ), array(), _YOURTHEMENAME_VER );
 
@@ -24,4 +24,4 @@ if ( ! function_exists( '_yourthemename_assets' ) ) {
 		}
 	}
 }
-add_action( 'wp_enqueue_scripts', '_yourthemename_assets' );
+add_action( 'wp_enqueue_scripts', 'Harvest\\assets' );

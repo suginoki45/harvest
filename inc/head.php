@@ -2,17 +2,17 @@
 /**
  * Function to set up content of the head element
  *
- * @package _youtrthemename
+ * @package harvest
  * @author  Glatch
  */
 
 namespace Harvest;
 
-if ( ! function_exists( '_youtrthemename_render_tag_in_head' ) ) {
+if ( ! function_exists( 'render_tag_in_head' ) ) {
 	/**
 	 * Sets up content of the head element.
 	 */
-	function _youtrthemename_render_tag_in_head() {
+	function render_tag_in_head() {
 		?>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +25,7 @@ if ( ! function_exists( '_youtrthemename_render_tag_in_head' ) ) {
 	}
 }
 
-add_action( 'wp_head', '_youtrthemename_render_tag_in_head', 1 );
+add_action( 'wp_head', 'Harvest\\render_tag_in_head', 1 );
 remove_action( 'wp_head', 'wp_generator' );
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
