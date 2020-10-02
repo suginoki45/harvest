@@ -1,10 +1,7 @@
 .toggle {
-	position: fixed;
-	top: 20px;
-	right: 20px;
-	z-index: 9999;
 	display: none;
 	@include mq($until: map-get($mq-breakpoints, tablet)) {
+		z-index: 9999;
 		display: block;
 	}
 }

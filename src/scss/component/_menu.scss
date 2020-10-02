@@ -1,10 +1,12 @@
 .menu {
+	margin-left: 16px;
 	@include mq($until: map-get($mq-breakpoints, tablet)) {
 		position: fixed;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
+		margin-left: 0;
 		padding: 10rem 2rem 2rem;
 		text-align: center;
 		background-color: #212121;
