@@ -2,8 +2,8 @@
 
 {% block content %}
 	<div class="section">
+		{% include 'partial/hero.twig' %}
 		<div class="container">
-			{% include 'partial/hero.twig' %}
 			<section>
 				<ul class="grid is-gap-2 entries">
 					{% for post in posts %}
