@@ -28,6 +28,11 @@
 	"phpcbf.onsave": true,
 	"javascript.format.enable": false,
 	"typescript.format.enable": false,
-	"vetur.format.enable": false,
 	"eslint.format.enable": true,
+
+	// htmlhintの設定
+	"htmlhint.documentSelector": [
+    "html",
+    "twig"
+  ]
 }
